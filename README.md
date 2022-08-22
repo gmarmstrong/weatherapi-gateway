@@ -46,5 +46,5 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
   - [ ] CI/CD
   - [ ] [Configure reverse proxy to cache responses](https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/)
   - [ ] Double-check the [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) default settings for `proxy_ssl_*`, harden if necessary
-  - [ ] Inspect the network traffic, keep an eye out for the API key (or its hashes)
+  - [x] Inspect the network traffic, keep an eye out for the API key (or its hashes)
   - [ ] DDoS protection, rate limiting, etc.
