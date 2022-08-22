@@ -29,3 +29,4 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
   - localhost:80 gives 200 OK with message `All OK`
   - localhost:80/v1/current.json gives `{"error":{"code":1002,"message":"API key is invalid or not provided."}}`
     - Makes sense, since we haven't provided an API key yet
+- We can begin by passing the API key as an environment variable through Docker's ENV instruction
