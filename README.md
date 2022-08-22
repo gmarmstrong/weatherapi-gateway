@@ -58,3 +58,4 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
 - [ ] Double-check the [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) default settings for `proxy_ssl_*`, harden if necessary
 - [x] Inspect the network traffic, keep an eye out for the API key (or its hashes)
 - [ ] DDoS protection, rate limiting, etc.
+- [ ] Set up code scanning with Snyk and/or similar services
