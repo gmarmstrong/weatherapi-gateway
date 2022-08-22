@@ -37,3 +37,8 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
     and regex doesn't feel like a proper solution here.
   - Can we provide the query parameter in the headers or body of the request instead?
     - At least in this case, yes we can! Just name the header "key" and set the value to the API key.
+- Time is now 4:44 pm EDT
+  - <localhost:80> gives 200 OK with message `All OK`
+  - <localhost:80/v1/current.json> gives `{"error":{"code":1003,"message":"Parameter q is missing."}}`
+  - <localhost:80/v1/current.json?q=10014&aqi=no> gives `{"location":{"name":"New York",[...]}}`
+    - Great!
