@@ -23,3 +23,9 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
   - `nginx/templates/nginx.conf` is the same as `nginx.conf`
   - `nginx.conf` looks compatible with our configuration
   - `nginx/conf.d/default.conf` problematic? likely!
+- `default.conf` seems safe to delete entirely, and doing so moves us forward!
+
+- Time is now 4:24 pm EDT (5:50 pm is deadline)
+  - localhost:80 gives 200 OK with message `All OK`
+  - localhost:80/v1/current.json gives `{"error":{"code":1002,"message":"API key is invalid or not provided."}}`
+    - Makes sense, since we haven't provided an API key yet
