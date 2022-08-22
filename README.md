@@ -2,6 +2,21 @@
 
 Use an nginx reverse proxy as an API gateway to WeatherAPI.com
 
+## Usage
+
+First, get a WeatherAPI.com account and generate an API key. The following commands
+assume that you have stored the API key in the environment variable `WEATHER_API_KEY`
+and that Docker is installed and the engine is running.
+
+**Please note:** if you use the `zsh` shell (default on recent macOS installations),
+the URL _must_ be enclosed in double quotes.
+
+```bash
+docker build -t weather_proxy:latest .
+docker run -e WEATHER_API_KEY=$WEATHER_API_KEY -p 80:80 weather_proxy:latest
+curl "localhost:80/v1/current.json?q=10014&aqi=no"
+```
+
 ## Thoughts
 
 - We'll be using [Weather API](https://www.weatherapi.com/docs/)
