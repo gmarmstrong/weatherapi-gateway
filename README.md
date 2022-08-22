@@ -20,3 +20,6 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
     - /etc/nginx/conf.d/default.conf
     - /etc/nginx/conf.d/nginx.conf
     - /etc/nginx/templates/nginx.conf
+  - `nginx/templates/nginx.conf` is the same as `nginx.conf`
+  - `nginx.conf` looks compatible with our configuration
+  - `nginx/conf.d/default.conf` problematic? likely!
