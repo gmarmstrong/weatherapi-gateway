@@ -47,7 +47,7 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
 
 ### CI/CD
 
-- [ ] Build and publish Docker image
+- [x] Build and publish Docker image
 
 ### Performance
 
