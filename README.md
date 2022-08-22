@@ -61,3 +61,4 @@ curl "localhost:80/v1/current.json?q=10014&aqi=no"
 - Remaining TODOs have been moved to [Issues](https://github.com/gmarmstrong/weatherapi-gateway/issues)
 - Added usage instructions to README.md
 - Time is now 5:39 pm EDT, deadline is 5:50 pm EDT. 11 minutes remaining.
+- Created a Snyk workflow for code/security scanning
