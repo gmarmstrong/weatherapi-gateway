@@ -30,3 +30,9 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
   - localhost:80/v1/current.json gives `{"error":{"code":1002,"message":"API key is invalid or not provided."}}`
     - Makes sense, since we haven't provided an API key yet
 - We can begin by passing the API key as an environment variable through Docker's ENV instruction
+  - [Weather API docs](https://www.weatherapi.com/docs/)
+  - Weather API's [authentication docs](https://www.weatherapi.com/docs/#intro-authentication) recommend
+    using `key=<YOUR API KEY>` as a query parameter, but passing secrets in the URL isn't a good idea.
+    It would also be hard to append that query parameter to the `proxy_pass` URL (consider `?` vs `&` in URLs),
+    and regex doesn't feel like a proper solution here.
+  - Can we provide the query parameter in the headers or body of the request instead?
