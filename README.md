@@ -42,9 +42,19 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
   - <localhost:80/v1/current.json> gives `{"error":{"code":1003,"message":"Parameter q is missing."}}`
   - <localhost:80/v1/current.json?q=10014&aqi=no> gives `{"location":{"name":"New York",[...]}}`
     - Great!
-- Now some TODOs:
-  - [ ] CI/CD
-  - [ ] [Configure reverse proxy to cache responses](https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/)
-  - [ ] Double-check the [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) default settings for `proxy_ssl_*`, harden if necessary
-  - [x] Inspect the network traffic, keep an eye out for the API key (or its hashes)
-  - [ ] DDoS protection, rate limiting, etc.
+
+## TODOs
+
+### CI/CD
+
+- [ ] Build and publish Docker image
+
+### Performance
+
+- [ ] [Configure reverse proxy to cache responses](https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/)
+
+### Security
+
+- [ ] Double-check the [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) default settings for `proxy_ssl_*`, harden if necessary
+- [x] Inspect the network traffic, keep an eye out for the API key (or its hashes)
+- [ ] DDoS protection, rate limiting, etc.
