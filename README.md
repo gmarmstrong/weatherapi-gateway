@@ -12,3 +12,4 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
 - Next, we'll set up a simple [reverse proxy in nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
 - Actually, before we do that, let's put the nginx.conf file where it belongs
   - nginx.conf is in the /etc/nginx/conf.d directory, but [some tutorials](https://aws.amazon.com/getting-started/hands-on/setup-an-nginx-reverse-proxy/) suggest the templates directory instead (makes sense)
+- Now we'll actually configure the reverse proxy
