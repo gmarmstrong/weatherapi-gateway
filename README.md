@@ -36,3 +36,4 @@ Use an nginx reverse proxy as an API gateway to WeatherAPI.com
     It would also be hard to append that query parameter to the `proxy_pass` URL (consider `?` vs `&` in URLs),
     and regex doesn't feel like a proper solution here.
   - Can we provide the query parameter in the headers or body of the request instead?
+    - At least in this case, yes we can! Just name the header "key" and set the value to the API key.
